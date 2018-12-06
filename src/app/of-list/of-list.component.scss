@@ -1,0 +1,10 @@
+.list {
+  width: 500px;
+  padding: 2rem;
+}
+
+.item {
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}

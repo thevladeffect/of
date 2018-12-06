@@ -1,0 +1,9 @@
+<div class="list">
+  <ng-container *ngIf="list$ | async as list">
+    <div class="item" *ngFor="let of of list">
+      <of [author]="of.author"
+          [description]="of.description"
+          [createdAt]="of.createdAt"></of>
+    </div>
+  </ng-container>
+</div>
