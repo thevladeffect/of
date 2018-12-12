@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:gh": "ng build --prod --base-href 'https://thevladeffect.github.io/of/'",
+    "build:gh": "ng build --prod --base-href 'https://of.gripe'",
     "deploy:gh": "npx ngh --dir=dist/of"
   },
   "private": true,
