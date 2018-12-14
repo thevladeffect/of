@@ -327,7 +327,13 @@ THE SOFTWARE.
 
 @angular/material/card
 
+@ngx-progressbar/core
+MIT
+
 @angular/animations
+MIT
+
+@ngx-progressbar/http
 MIT
 
 zone.js
