@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { OfListComponent } from './of-list.component';
+import {OfListComponent} from './of-list.component';
 
 describe('OfListComponent', () => {
   let component: OfListComponent;
@@ -8,9 +8,9 @@ describe('OfListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OfListComponent ]
+      declarations: [OfListComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

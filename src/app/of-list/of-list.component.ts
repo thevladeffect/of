@@ -15,7 +15,8 @@ export class OfListComponent implements OnInit {
 
   constructor(
     private ofService: OfService,
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
     this.updateList();

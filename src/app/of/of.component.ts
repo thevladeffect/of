@@ -11,7 +11,8 @@ export class OfComponent implements OnInit {
   @Input() description: string;
   @Input() createdAt: Date;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

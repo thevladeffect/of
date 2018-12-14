@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { OfComponent } from './of.component';
+import {OfComponent} from './of.component';
 
 describe('OfComponent', () => {
   let component: OfComponent;
@@ -8,9 +8,9 @@ describe('OfComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OfComponent ]
+      declarations: [OfComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
