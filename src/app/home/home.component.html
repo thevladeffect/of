@@ -1,0 +1,10 @@
+<div class="home">
+  <of-list [list]="popular"
+           title="Recent"
+           (add)="add(popular, $event)"
+           (remove)="remove(popular, $event)"></of-list>
+  <of-list [list]="recent"
+           title="Most popular"
+           (add)="add(recent, $event)"
+           (remove)="remove(recent, $event)"></of-list>
+</div>

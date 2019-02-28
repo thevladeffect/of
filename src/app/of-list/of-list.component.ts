@@ -1,8 +1,12 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Of} from '../of.model';
 
-import {OfService} from '../of.service';
-import {Observable} from 'rxjs';
+const fibonacci = (num: number): number => {
+  if (num === 1 || num === 2) {
+    return 1;
+  }
+  return fibonacci(num - 1) + fibonacci(num - 2);
+};
 
 @Component({
   selector: 'of-list',
@@ -11,18 +15,29 @@ import {Observable} from 'rxjs';
 })
 export class OfListComponent implements OnInit {
 
-  public list$: Observable<Of[]>;
+  @Input() list: Of[] = [];
+  @Input() title: string;
 
-  constructor(
-    private ofService: OfService,
-  ) {
+  @Output() remove = new EventEmitter<Of>();
+  @Output() add = new EventEmitter<Of>();
+
+  constructor() {
   }
+
+  public name: string;
+  public description: string;
 
   ngOnInit() {
-    this.updateList();
   }
 
-  private updateList(): void {
-    this.list$ = this.ofService.getAll();
+  insert(): void {
+    this.add.emit({author: this.name || 'Anonymous', description: this.description, createdAt: new Date().toISOString() });
+    this.name = '';
+    this.description = '';
+  }
+
+  calculateHash(of: Of) {
+    const seed = of.author.length + 1;
+    return fibonacci(seed);
   }
 }

@@ -1,9 +1,27 @@
 <div class="list">
-  <ng-container *ngIf="list$ | async as list">
-    <div class="item" *ngFor="let of of list">
-      <of [author]="of.author"
-          [description]="of.description"
-          [createdAt]="of.createdAt"></of>
-    </div>
-  </ng-container>
+  <span class="title">
+    {{title}}
+  </span>
+  <div class="input">
+    <mat-form-field>
+      <input placeholder="Enter name here" matInput type="text" [(ngModel)]="name">
+    </mat-form-field>
+    <mat-form-field>
+      <input placeholder="Enter your of here" matInput type="text" [(ngModel)]="description">
+    </mat-form-field>
+    <button mat-raised-button (click)="insert()">Submit</button>
+  </div>
+  <div class="item" *ngFor="let of of list">
+    <of [author]="of.author"
+        [description]="of.description"
+        [createdAt]="of.createdAt"></of>
+    <mat-chip-list>
+      <mat-chip title="Score" color="primary" selected="true">
+        {{ calculateHash(of) }}
+      </mat-chip>
+      <mat-chip title="Delete" color="warn" selected="true" (click)="remove.emit(of)">
+        Delete
+      </mat-chip>
+    </mat-chip-list>
+  </div>
 </div>

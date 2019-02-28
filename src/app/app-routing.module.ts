@@ -1,12 +1,12 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
-import {OfListComponent} from './of-list/of-list.component';
+import {HomeComponent} from './home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: OfListComponent,
+    component: HomeComponent,
   }
 ];
 

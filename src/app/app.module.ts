@@ -1,7 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {MatCardModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatChipsModule, MatFormFieldModule, MatInputModule} from '@angular/material';
 import {HttpClientModule} from '@angular/common/http';
 
 import {NgProgressModule} from '@ngx-progressbar/core';
@@ -11,24 +11,32 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {OfComponent} from './of/of.component';
 import {OfListComponent} from './of-list/of-list.component';
+import { HomeComponent } from './home/home.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     OfComponent,
-    OfListComponent
+    OfListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgProgressModule.forRoot({
+    NgProgressModule.withConfig({
       spinner: false,
       thick: true,
     }),
-    NgProgressHttpModule.forRoot(),
+    NgProgressHttpModule,
     NoopAnimationsModule,
     MatCardModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

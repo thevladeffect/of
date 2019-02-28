@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {Observable, of} from 'rxjs';
 
 import {Of} from './of.model';
 import {environment} from '../environments/environment';
@@ -16,5 +16,13 @@ export class OfService {
 
   public getAll(): Observable<Of[]> {
     return this.http.get<Of[]>(this.resourceUrl);
+  }
+
+  public getPopular(): Observable<Of[]> {
+    return this.http.get<Of[]>('./assets/data.json');
+  }
+
+  public getRecent(): Observable<Of[]> {
+    return this.http.get<Of[]>('./assets/data.json');
   }
 }
