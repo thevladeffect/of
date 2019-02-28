@@ -36,8 +36,7 @@ export class OfListComponent implements OnInit {
     this.description = '';
   }
 
-  calculateHash(of: Of) {
-    const seed = of.author.length + 1;
+  calculateHash(seed: number) {
     return fibonacci(seed);
   }
 }

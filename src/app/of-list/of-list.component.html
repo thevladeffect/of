@@ -17,7 +17,7 @@
         [createdAt]="of.createdAt"></of>
     <mat-chip-list>
       <mat-chip title="Score" color="primary" selected="true">
-        {{ calculateHash(of) }}
+        {{ calculateHash(of.author.length) }}
       </mat-chip>
       <mat-chip title="Delete" color="warn" selected="true" (click)="remove.emit(of)">
         Delete
