@@ -13,13 +13,19 @@ import {OfComponent} from './of/of.component';
 import {OfListComponent} from './of-list/of-list.component';
 import { HomeComponent } from './home/home.component';
 import {FormsModule} from '@angular/forms';
+import { ListComponent } from './of-list/list/list.component';
+import { InputComponent } from './of-list/input/input.component';
+import { FibonacciPipe } from './of-list/fibonacci.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     OfComponent,
     OfListComponent,
-    HomeComponent
+    HomeComponent,
+    ListComponent,
+    InputComponent,
+    FibonacciPipe
   ],
   imports: [
     BrowserModule,
