@@ -1,26 +1,23 @@
 import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Of} from '../of.model';
 import {List} from 'immutable';
+import {Of} from '../../of.model';
+
+
 
 @Component({
-  selector: 'of-list',
-  templateUrl: './of-list.component.html',
+  selector: 'list',
+  templateUrl: './list.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styleUrls: ['./of-list.component.scss']
+  styleUrls: ['./list.component.scss']
 })
-export class OfListComponent implements OnInit {
+export class ListComponent implements OnInit {
 
   @Input() list: List<Of> = List([]);
-  @Input() title: string;
-
   @Output() remove = new EventEmitter<Of>();
-  @Output() add = new EventEmitter<Of>();
 
-  constructor() {
-  }
+  constructor() { }
 
   ngOnInit() {
   }
-
 
 }

@@ -1,0 +1,13 @@
+<div class="item" *ngFor="let of of list">
+  <of [author]="of.author"
+      [description]="of.description"
+      [createdAt]="of.createdAt"></of>
+  <mat-chip-list>
+    <mat-chip title="Score" color="primary" selected="true">
+      {{ of.author.length | fibonacci }}
+    </mat-chip>
+    <mat-chip title="Delete" color="warn" selected="true" (click)="remove.emit(of)">
+      Delete
+    </mat-chip>
+  </mat-chip-list>
+</div>
